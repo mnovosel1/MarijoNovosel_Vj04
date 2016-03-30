@@ -78,6 +78,7 @@
             this.btnUplati.TabIndex = 7;
             this.btnUplati.Text = "Uplati";
             this.btnUplati.UseVisualStyleBackColor = true;
+            this.btnUplati.Click += new System.EventHandler(this.btnUplati_Click);
             // 
             // txtUplaceni3
             // 
@@ -153,6 +154,7 @@
             this.btnOdigraj.TabIndex = 7;
             this.btnOdigraj.Text = "Odigraj";
             this.btnOdigraj.UseVisualStyleBackColor = true;
+            this.btnOdigraj.Click += new System.EventHandler(this.btnOdigraj_Click);
             // 
             // txtDobitniBroj1
             // 
@@ -213,12 +215,12 @@
             this.lblNatpis.TabIndex = 9;
             this.lblNatpis.Text = "Broj pogodaka:";
             // 
-            // label1
+            // lblBrojPogodaka
             // 
             this.lblBrojPogodaka.AutoSize = true;
             this.lblBrojPogodaka.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lblBrojPogodaka.Location = new System.Drawing.Point(117, 230);
-            this.lblBrojPogodaka.Name = "label1";
+            this.lblBrojPogodaka.Name = "lblBrojPogodaka";
             this.lblBrojPogodaka.Size = new System.Drawing.Size(14, 13);
             this.lblBrojPogodaka.TabIndex = 10;
             this.lblBrojPogodaka.Text = "0";
@@ -234,7 +236,7 @@
             this.Controls.Add(this.groupBoxUplaceni);
             this.Name = "FrmLoto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "LOTO //39";
+            this.Text = "LOTO/39";
             this.groupBoxUplaceni.ResumeLayout(false);
             this.groupBoxUplaceni.PerformLayout();
             this.groupBoxDobitni.ResumeLayout(false);

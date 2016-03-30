@@ -54,43 +54,7 @@ namespace LOTO_aplikacija
             }
 
             return ispravni;
-        }
-
-        /// <summary>
-        /// Dodaje korisničke vrijednosti u listu uplaćenih brojeva. Svaka vrijednost se
-        /// prethodno provjerava i uzima u obzir samo ukoliko se radi o cjelobrojnoj
-        /// vrijednosti u rasponu od 1 do 39, i ako već ne postoji ista vrijednost u listi.
-        /// </summary>
-        /// <param name="korisnickeVrijednosti">Vrijednosti koje je unio korisnik.</param>
-        /// <returns>True ako se u listi nalazi 7 jedinstvenih brojeva u rasponu od 1 do
-        /// 39, u suprotnom False.</returns>
-        public bool UnesiUplaceneBrojeve(List<string> korisnickeVrijednosti)
-        {
-            bool ispravni = false;
-            UplaceniBrojevi.Clear();
-
-            foreach (string v in korisnickeVrijednosti)
-            {
-                int broj = 0;
-                if (int.TryParse(v, out broj) == true)
-                {
-                    if (broj >= 1 && broj <= 39)
-                    {
-                        if (UplaceniBrojevi.Contains(broj) == false)
-                        {
-                            UplaceniBrojevi.Add(broj);
-                        }
-                    }
-                }
-            }
-
-            if (UplaceniBrojevi.Count == 7)
-            {
-                ispravni = true;
-            }
-
-            return ispravni;
-        }
+        }        
 
         /// <summary>
         /// Generira 7 nasumičnih jedinstvenih cijelih brojeva u rasponu od 1 do 39,
